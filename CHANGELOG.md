@@ -2,16 +2,22 @@
 
 All notable changes to the Mindful Coach project will be documented in this file.
 
-## [0.1.0] - 2026-05-13
+## [0.2.0] - 2026-05-13
 
 ### Added
-- Initial project structure with Vite, React, and TypeScript.
-- Implementation of the "Serene Vitality" design system.
-- Multi-step onboarding flow with goal selection.
-- Dashboard with Energy Score progress visualization.
-- Coach view with simulated AI chat interface and session cards.
-- Profile view with user stats and preferences.
-- Data visualizations for Steps (Bar Chart) and Sleep (Area Chart) using Recharts.
-- Smooth view transitions using AnimatePresence from Motion.
-- Comprehensive design documentation in `Design.md`.
-- Basic accessibility improvements including tap target sizes and contrast ratios.
+- Integrated **Gemini AI** for professional, mindful wellness coaching with structured JSON support.
+- Added **Persistent Storage** layer using `localStorage` to save user profile, wellness goals, and chat history.
+- Enhanced **Onboarding Flow** to collect user name and personalize the experience.
+- Implemented **Local-First Architecture** ensuring user data privacy.
+- Dynamic **Avatar System** using `dicebear` triggered by user identity.
+
+### Fixed
+- Improved **Animation Performance** by switching to `motion/react` with custom `cubic-bezier` easing.
+- Optimized **Navigation Feedback** with active state scaling (98%/95%).
+- Resolved **TypeScript Type Safety** issues in storage retrieval and AI service integration.
+- Fixed hardcoded profile identifiers in Dashboard headers.
+
+### Technical
+- Added `date-fns` for robust temporal formatting in the dashboard.
+- Configured **Strict Response Schema** for Gemini AI to ensure consistent coaching rationale.
+- Implemented **Staggered Pulse Animation** for AI typing indicators.

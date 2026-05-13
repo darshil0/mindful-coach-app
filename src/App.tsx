@@ -597,7 +597,7 @@ const Dashboard = () => {
       {/* Top Nav Bar */}
       <nav className="w-full h-16 flex items-center justify-between px-5 sticky top-0 bg-background/80 backdrop-blur-md z-30 flex-shrink-0">
         <div className="w-10 h-10 rounded-full border-2 border-primary/20 p-0.5 overflow-hidden">
-          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mindful" alt="Profile" className="w-full h-full rounded-full object-cover" />
+          <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${storage.get<{ name: string }>(STORAGE_KEYS.USER_PROFILE)?.name || 'Mindful'}`} alt="Profile" className="w-full h-full rounded-full object-cover" />
         </div>
         <h1 className="text-base font-bold text-on-surface tracking-tight">
           {activeTab === 'home' && "Mindful Coach"}
