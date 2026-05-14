@@ -179,4 +179,4 @@ Feedback and contributions welcome. Please report issues with:
 
 ---
 
-Built with ❤️ using React 19, TypeScript, and Gemini AI. Designed for calm, evidence-based wellness guidance.
+Built with ❤️ by Darshil & Designed for calm, evidence-based wellness guidance.
