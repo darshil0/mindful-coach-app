@@ -100,7 +100,7 @@ npm run preview  # Test production build locally at http://localhost:3000
 ### API Integration
 
 **Gemini AI Service** (`src/services/geminiService.ts`):
-- Model: `gemini-3-flash-preview` (fast, cost-effective inference)
+- Model: `gemini-1.5-flash-preview` (fast, cost-effective inference)
 - Request Format: User message + wellness context (name, goal) with structured schema
 - Response Format: JSON with `text` (coaching advice) + `rationale` (science-backed explanation)
 - Schema Validation: Uses `responseSchema` and `responseMimeType: "application/json"` for structured output
