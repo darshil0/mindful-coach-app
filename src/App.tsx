@@ -50,7 +50,7 @@ interface GoalOption {
 type View = 'onboarding' | 'dashboard';
 
 // --- Constants ---
-const EASE_OUT_CUBIC = [0.33, 1, 0.68, 1];
+const EASE_OUT_CUBIC = "easeOut" as const;
 
 const goals: GoalOption[] = [
   { id: 'sleep', title: 'Sleep better', subtitle: 'Wake up refreshed', icon: Moon },
@@ -195,7 +195,7 @@ const Onboarding = ({ onComplete }: { onComplete: () => void }) => {
                 <input 
                   type="text" 
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                   placeholder="e.g. Darshil"
                   className="w-full h-12 bg-background border-2 border-outline-variant rounded-xl px-4 text-sm font-medium focus:border-primary outline-none transition-all"
                 />
@@ -499,8 +499,8 @@ const CoachView = () => {
             placeholder="Talk to your coach..."
             className="flex-1 bg-transparent border-none outline-none text-sm py-2 placeholder:text-on-surface-variant/40"
             value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => e.key === 'Enter' && handleSend()}
             disabled={isTyping}
           />
           <button 
