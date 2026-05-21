@@ -2,39 +2,33 @@
 
 All notable changes to the Mindful Coach project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.2.2] - 2026-05-21
+## [0.2.2] - 2026-05-22
 
-### 🛠 Fixed - TypeScript & Build Issues
+### 🛠 Fixed - Gemini SDK & Build Issues
+
+#### Gemini AI Service
+- **Model Update**: Switched to `gemini-1.5-flash` for better performance and compatibility.
+- **API Fix**: Ensured proper property access for Gemini SDK response object.
 
 #### TypeScript Configuration
-- **JSX Runtime**: Added `jsxImportSource: "react"` to tsconfig.json for React 19 proper JSX transformation
-- **Strict Mode**: Enabled strict type checking with `"strict": true` for better error detection
-- **Module Interoperability**: Added `esModuleInterop: true` for CommonJS/ES module compatibility
-- **Build Configuration**: Added `include` and `exclude` directives for proper file scoping
+- **Environment Types**: Fixed `import.meta.env` typing by correctly placing `src/vite-env.d.ts`.
 
-#### Event Handler Type Safety
-- **Input Events**: Added explicit `React.ChangeEvent<HTMLInputElement>` types to onChange handlers
-- **Keyboard Events**: Added explicit `React.KeyboardEvent<HTMLInputElement>` types to onKeyDown handlers
-- **Implicit Any Resolution**: Removed all implicit `any` type errors in event handlers
+### 🔄 Changed - Architecture Refactor
 
-#### Environment Variables
-- **Vite Env Types**: Created `src/vite-env.d.ts` with TypeScript definitions for `ImportMeta.env`
-- **Type Safety**: Ensures `import.meta.env.VITE_GEMINI_API_KEY` has proper type checking
+#### Component Modularization
+- **Refactored `App.tsx`**: Extracted UI sections into granular components in `src/components/` (`Onboarding`, `HomeView`, `CoachView`, `ProfileView`, `Dashboard`).
+- **Utility Extraction**: Moved `cn` helper to `src/utils/cn.ts`.
 
-#### Animation Easing
-- **Motion Library Compatibility**: Fixed easing function from numeric array `[0.33, 1, 0.68, 1]` to string `"easeOut"`
-- **Type Alignment**: Motion library now receives properly typed easing values
+### ✨ Added - Accessibility Features
 
-#### Production Build
-- **Terser Minification**: Added `terser ^5.36.0` to devDependencies for JavaScript minification
-- **Build Optimization**: Production build now succeeds with 794 KB JavaScript bundle (238 KB gzipped)
+- **Form Labels**: Added proper `id` and `htmlFor` associations in onboarding.
+- **ARIA Labels**: Improved screen reader support for chat inputs.
+- **Motion Control**: Implemented `prefers-reduced-motion` support across all animated components using `useReducedMotion`.
 
 ### ⚠️ Breaking Changes
 
-- **TypeScript Strict Mode**: All code now uses strict type checking; custom extensions must update to strict types
-- **Easing Functions**: If using custom animations, update easing from array format to Motion library string format
-- **TSConfig Includes**: The `include: ["src"]` directive means TypeScript only checks src/ folder; ensure custom files are included
-- **API Key Access**: Must use `import.meta.env.VITE_GEMINI_API_KEY` (not `process.env`); ensure Vite environment types are in place
+- **Project Structure**: Components are now located in `src/components/` instead of being co-located in `App.tsx`.
+- **API Key Access**: Ensure `src/vite-env.d.ts` is present for TypeScript to recognize `import.meta.env`.
 
 ### 🧪 Enhanced Testing Recommendations
 

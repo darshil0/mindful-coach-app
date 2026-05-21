@@ -110,7 +110,7 @@ npm run preview  # Test production build locally at http://localhost:3000
 
 | Component | Purpose |
 |-----------|---------|
-| `Onboarding` | 2-step flow: goal selection + profile creation with animated progress bar |
+| `Onboarding` | 2-step flow: goal selection + profile creation with animated progress bar and accessibility |
 | `Dashboard` | Main view container with sticky top nav and sticky bottom tab navigation (64px height) |
 | `HomeView` | Energy score circle, health metrics charts, micro-session cards, AI coaching insights |
 | `CoachView` | Scrollable chat interface with session shortcuts, typing indicators, and message input |
@@ -134,7 +134,7 @@ npm run preview  # Test production build locally at http://localhost:3000
 - ✅ Touch targets: Minimum 44×44px (buttons, tabs, form inputs)
 - ✅ Form labels: Explicit `<label>` elements associated via `id` attribute
 - ✅ Semantic HTML: Proper use of `<main>`, `<nav>`, `<header>`, `<footer>` elements
-- **Note**: `prefers-reduced-motion` support is planned for a future release; animations currently always enabled
+- ✅ Motion: `prefers-reduced-motion` support implemented using `useReducedMotion` hook
 
 ## 📱 Responsive Design
 
