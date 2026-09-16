@@ -2,6 +2,15 @@
 
 All notable changes to the Mindful Coach project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.3] - 2026-05-23
+
+### 🛠 Fixed & Enhanced
+- **TypeScript Easing Fix**: Resolved `Easing` type mismatch in `CoachView.tsx` with constant tuple declaration.
+- **Profile Management**: Added inline user name editing and wellness goal switching in `ProfileView.tsx`.
+- **Build Chunking**: Optimized Vite Rollup manual chunking to isolate vendor bundles (`recharts`, `motion`, `@google/genai`, `lucide-react`).
+- **Test Suite**: Added Vitest unit test suite covering `storage.ts` and `cn.ts` utilities (`npm test`).
+- **Documentation**: Corrected model references in `README.md` to `gemini-1.5-flash`.
+
 ## [0.2.2] - 2026-05-22
 
 ### 🛠 Fixed - Gemini SDK & Build Issues

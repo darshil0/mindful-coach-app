@@ -6,7 +6,7 @@ A calm, minimalist health coaching application designed for mindful wellness, go
 
 - **Personalized Onboarding**: Select primary wellness goals (Sleep, Stress, Energy, Weight) and customize your experience with your name
 - **Daily Energy Score**: Visual circular progress indicator tracking your wellness state throughout the day
-- **AI-Powered Coaching**: Real-time conversation with Gemini AI (gemini-3-flash-preview) providing evidence-backed wellness guidance and psychological rationale
+- **AI-Powered Coaching**: Real-time conversation with Gemini AI (gemini-1.5-flash) providing evidence-backed wellness guidance and psychological rationale
 - **Interactive Micro-Sessions**: Quick-access guided sessions including:
   - Mindfulness 101: Foundational meditation techniques
   - Breath Work: Guided breathing exercises for stress relief
@@ -27,7 +27,7 @@ A calm, minimalist health coaching application designed for mindful wellness, go
 - **Animations**: Motion library with optimized easing functions
 - **Icons**: Lucide React (546+ icons)
 - **Data Visualization**: Recharts (bar charts, area charts)
-- **AI Integration**: Google Gemini 3 Flash (gemini-3-flash-preview) with structured JSON responses and schema validation
+- **AI Integration**: Google Gemini 1.5 Flash (gemini-1.5-flash) with structured JSON responses and schema validation
 - **Bundler**: Vite 6.2 with optimizations for artifact environments
 - **Minification**: Terser 5.36+ for production code optimization
 - **Storage**: Hybrid localStorage + in-memory fallback for artifact compatibility

@@ -20,7 +20,7 @@ const goals: GoalOption[] = [
   { id: 'weight', title: 'Lose weight', subtitle: 'Sustainable habits', icon: Scale },
 ];
 
-const EASE_OUT_CUBIC = [0.33, 1, 0.68, 1];
+const EASE_OUT_CUBIC = [0.33, 1, 0.68, 1] as const;
 
 export const CoachView = () => {
   const shouldReduceMotion = useReducedMotion();

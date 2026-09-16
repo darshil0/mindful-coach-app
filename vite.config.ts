@@ -38,7 +38,15 @@ export default defineConfig(({mode}) => {
       sourcemap: false,
       rollupOptions: {
         output: {
-          manualChunks: undefined,
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('recharts')) return 'vendor-recharts';
+              if (id.includes('motion')) return 'vendor-motion';
+              if (id.includes('@google/genai')) return 'vendor-genai';
+              if (id.includes('lucide-react')) return 'vendor-lucide';
+              return 'vendor-core';
+            }
+          },
         },
       },
     },
