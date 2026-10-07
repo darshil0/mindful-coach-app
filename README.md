@@ -217,6 +217,6 @@ Feedback and contributions welcome. Please report issues with:
 
 Built with ❤️ by Darshil. Designed for calm, evidence-based wellness guidance.
 
-**Last Updated**: May 21, 2026  
-**Version**: 0.2.2 (in development)  
-**Status**: Production-ready with TypeScript strict mode
+**Last Updated**: May 24, 2026
+**Version**: 0.2.4
+**Status**: Production-ready with WCAG 2.1 AA accessibility and strict mode

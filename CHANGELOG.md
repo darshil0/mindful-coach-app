@@ -2,6 +2,13 @@
 
 All notable changes to the Mindful Coach project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.4] - 2026-05-24
+
+### 🛠 Fixed & Enhanced
+- **WCAG & Accessibility Improvements**: Enhanced screen reader support and WCAG 2.1 AA compliance across all components (`CoachView`, `ProfileView`, `Onboarding`, `Dashboard`).
+- **Form Label Associations**: Added explicit `aria-label`, `id`, and visually hidden `<label>` elements for inputs and interactive controls.
+- **Image Accessibility**: Fixed missing and non-descriptive `alt` tags on profile avatars.
+
 ## [0.2.3] - 2026-05-23
 
 ### 🛠 Fixed & Enhanced

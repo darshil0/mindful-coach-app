@@ -163,6 +163,7 @@ export const CoachView = () => {
         <div className="flex items-center gap-2 bg-surface rounded-full border border-outline-variant px-4 py-1 shadow-sm focus-within:border-primary transition-colors">
           <input 
             type="text" 
+            id="coach-chat-input"
             placeholder="Talk to your coach..."
             aria-label="Talk to your coach"
             className="flex-1 bg-transparent border-none outline-none text-sm py-2 placeholder:text-on-surface-variant/40"
@@ -174,6 +175,7 @@ export const CoachView = () => {
           <button 
             onClick={handleSend}
             disabled={!input.trim() || isTyping}
+            aria-label="Send message"
             className={cn(
               "w-10 h-10 rounded-full flex items-center justify-center transition-all",
               (input.trim() && !isTyping)
