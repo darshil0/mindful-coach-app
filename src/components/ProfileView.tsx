@@ -57,7 +57,7 @@ export const ProfileView = () => {
       <div className="w-24 h-24 rounded-full border-4 border-primary/10 p-1 relative">
         <img
           src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${profile?.name || 'Mindful'}`}
-          alt="Profile Avatar"
+          alt={`${profile?.name || 'User'}'s Profile Avatar`}
           className="w-full h-full rounded-full object-cover"
         />
         <button
@@ -71,9 +71,11 @@ export const ProfileView = () => {
       <div className="text-center w-full flex flex-col items-center">
         {isEditingName ? (
           <div className="flex items-center gap-2 mt-1">
+            <label htmlFor="profile-name-input" className="sr-only">Edit First Name</label>
             <input
               type="text"
               id="profile-name-input"
+              aria-label="Edit First Name"
               value={nameInput}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNameInput(e.target.value)}
               className="px-3 py-1 bg-surface border-2 border-primary rounded-lg text-lg font-bold text-on-surface outline-none text-center"

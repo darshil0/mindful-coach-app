@@ -140,6 +140,7 @@ export const Onboarding = ({ onComplete }: { onComplete: () => void }) => {
                   value={name}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                   placeholder="e.g. Darshil"
+                  aria-label="First Name"
                   className="w-full h-12 bg-background border-2 border-outline-variant rounded-xl px-4 text-sm font-medium focus:border-primary outline-none transition-all"
                 />
               </div>
